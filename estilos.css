@@ -6,7 +6,7 @@
 
 body {
     font-family: 'Roboto', sans-serif;
-    background-color: #000000;
+    background-color: #0000002c;
     color: white;
     padding: 20px;
     
@@ -23,12 +23,13 @@ body {
     padding: 30px 20px;
     border-radius: 10px;
     margin-bottom: 20px;
-    display: flex; 
-    align-items: center;
-    justify-content: center;
+    display: flex;
+    flex-direction: column; 
+    align-items: center; 
+    justify-content: center; 
     position: relative;
-    flex-direction: column;
 }
+
 
 .main-header h1 {
     font-size: 2.5em;
@@ -54,9 +55,9 @@ body {
 }
 
 .main-content-wrapper {
-    width: 50%;
-    float: left;
-    margin-top: 50px; 
+    width: 100%; 
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
 .search-form-section {
@@ -103,7 +104,9 @@ body {
 }
 
 .search-btn {
-    margin-top: 30px; 
+    margin-top: 30px;
+    margin-left: auto;
+    margin-right: auto;  
     padding: 10px 30px;
     background-color: #ffffff;
     color: #000000;
@@ -114,6 +117,7 @@ body {
     font-size: 1.1em;
     transition: background-color 0.3s;
 }
+
 
 
 .search-btn:hover {
@@ -157,7 +161,7 @@ body {
 .services-grid {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: center;  
     gap: 30px;
 }
 
@@ -242,9 +246,9 @@ body {
     background: rgba(0, 0, 0, 0.5);
     border-radius: 10px;
     padding: 20px;
-    border: 2px solid #ffffff;*/
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
 }
+
 
 .section h2 {
     color: #ffffff;
@@ -283,6 +287,7 @@ ul li a:hover, .footer a:hover {
 }
 
 .footer {
+    text-align: center; 
     margin-top: 30px;
     border-top: 2px solid #ffffff;
     padding-top: 20px;
@@ -295,6 +300,7 @@ ul li a:hover, .footer a:hover {
     font-weight: bold;
     margin: 0;
 }
+
 
 /* Estilo de acordeon*/
 .accordion-header {
@@ -404,4 +410,36 @@ body.terminos-pagina p {
     max-width: 700px;
     margin: 0 auto;
     font-weight: 500;
+}
+
+@media (min-width: 1024px) {
+    /* Para pantallas grandes, como laptops */
+    .main-header, .main-content-wrapper, .services-background-section, .section {
+        width: 80%;  /* Ajusta el ancho para no ocupar toda la pantalla */
+        margin: 0 auto;  /* Centra el contenido */
+    }
+
+   .main-header h1, .main-header p {
+    text-align: center;  /* Asegura que tanto el título como el texto estén centrados */
+}
+
+
+    .main-content {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+        align-items: center;  /* Centra los elementos dentro del main-content */
+    }
+
+    /* Asegura que las tarjetas también estén centradas */
+    .service-card {
+        display: flex;
+        flex-direction: column;
+        align-items: center;  /* Centra el contenido dentro de las tarjetas */
+    }
+
+    .search-btn {
+        display: block;
+        margin: 20px auto;  /* Centra el botón */
+    }
 }
