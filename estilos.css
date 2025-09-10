@@ -1,0 +1,407 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #000000;
+    color: white;
+    padding: 20px;
+    
+    background-image: url('imagen-developer1.png');
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
+.main-header {
+    text-align: center;
+    background: rgba(0, 0, 0, 0.6);
+    padding: 30px 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    display: flex; 
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    flex-direction: column;
+}
+
+.main-header h1 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+    color: #ffffff;
+    flex-grow: 1; 
+    text-align: center;
+    padding-left: 20px;
+}
+
+.main-header p {
+    font-size: 1.2em;
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-top: 10px; 
+}
+
+.header-logo {
+    width: 150px; 
+    height: auto;
+}
+
+.main-content-wrapper {
+    width: 50%;
+    float: left;
+    margin-top: 50px; 
+}
+
+.search-form-section {
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.8);
+    border-radius: 10px;
+    margin-bottom: 30px;
+}
+
+.bus-search-form {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-end;
+    justify-content: center;
+    gap: 15px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    color: white;
+}
+
+.form-group label {
+    font-weight: bold;
+    font-size: 0.9em;
+    margin-bottom: 5px;
+}
+
+.form-group label .required {
+    color: #ff0000;
+}
+
+.form-group select,
+.form-group input[type="date"] {
+    padding: 10px 15px;
+    border-radius: 5px;
+    border: none;
+    font-size: 1em;
+    background-color: rgba(255, 255, 255, 0.9);
+    color: #333;
+    cursor: pointer;
+    min-width: 150px;
+}
+
+.search-btn {
+    margin-top: 30px; 
+    padding: 10px 30px;
+    background-color: #ffffff;
+    color: #000000;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.1em;
+    transition: background-color 0.3s;
+}
+
+
+.search-btn:hover {
+    background-color: #cccccc;
+}
+
+
+.services-background-section {
+    display: flex;
+    width: 100%;
+    margin-bottom: 30px;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+
+.image-half-background {
+    flex: 1; 
+    background-image: url('URL_DE_TU_IMAGEN_DE_BUS.jpg'); 
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 500px; 
+}
+
+.our-services-showcase {
+    flex: 1; 
+    text-align: center;
+    padding: 40px 20px;
+    background-color: rgba(0, 0, 0, 0.7); 
+    border-radius: 0 10px 10px 0; 
+}
+
+.our-services-showcase h2 {
+    color: #ffffff;
+    font-size: 2.2em;
+    margin-bottom: 40px;
+}
+
+.services-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+}
+
+.service-card {
+    background-color: rgba(255, 255, 255, 0.05);
+    border-radius: 15px;
+    padding: 25px;
+    width: 280px;
+    text-align: center;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.4);
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.service-card:hover {
+    transform: translateY(-10px);
+   /* background-color: rgba(0, 0, 0, 0);*/
+}
+
+.icon-circle {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    border: 5px solid #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto 20px auto;
+    overflow: hidden;
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.icon-circle img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.service-card h3 {
+    color: #ffffff;
+    font-size: 1.5em;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+}
+
+.service-card p {
+    color: #cccccc;
+    font-size: 0.95em;
+}
+
+@media (max-width: 768px) {
+    .main-content-wrapper {
+        width: 100%;
+        float: none;
+    }
+    .services-background-section {
+        flex-direction: column; 
+    }
+    .image-half-background {
+        min-height: 300px; 
+        border-radius: 10px 10px 0 0; 
+    }
+    .our-services-showcase {
+        border-radius: 0 0 10px 10px; 
+    }
+    .services-grid {
+        flex-direction: column;
+        align-items: center;
+    }
+    .service-card {
+        width: 90%;
+    }
+}
+
+.main-content {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.section {
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+    padding: 20px;
+    border: 2px solid #ffffff;*/
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.section h2 {
+    color: #ffffff;
+    font-size: 2em;
+    margin-bottom: 15px;
+}
+
+.section p, .section li {
+    font-size: 1.1em;
+    line-height: 1.6;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+ul li {
+    margin: 10px 0;
+}
+
+ul li a, .footer a {
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 1.2em;
+    transition: color 0.3s;
+}
+
+ul li a:hover, .footer a:hover {
+    color: #ffffff;
+}
+
+.contact-info li {
+    font-size: 1.1em;
+    margin: 5px 0;
+}
+
+.footer {
+    margin-top: 30px;
+    border-top: 2px solid #ffffff;
+    padding-top: 20px;
+    text-align: center;
+}
+
+.footer p {
+    color: #ffffff;
+    font-size: 1em;
+    font-weight: bold;
+    margin: 0;
+}
+
+/* Estilo de acordeon*/
+.accordion-header {
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+}
+
+.accordion-header h2 {
+    margin: 0;
+    font-size: 1.8em; 
+}
+
+.accordion-icon {
+    font-size: 1.5em;
+    transition: transform 0.3s ease;
+}
+
+.accordion-header.active .accordion-icon {
+    transform: rotate(45deg);
+}
+
+.accordion-content {
+    overflow: hidden;
+    max-height: 0;
+    transition: max-height 0.4s ease-in-out;
+    padding: 0;
+}
+
+.accordion-content.expanded {
+    max-height: 500px;
+    padding: 20px;
+}
+
+.section.accordion {
+    padding: 15px 20px; /* Ajusta el padding para un tamaño más compacto */
+}
+
+/* Estilo para la página de términos y condiciones */
+body.terminos-pagina {
+    background-image: none;
+    background-color: #000000;
+    color: #f0f0f0;
+}
+
+/* Ajuste para las secciones dentro de la página de términos */
+body.terminos-pagina .section {
+    background: transparent;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: none;
+    padding: 25px 30px;
+}
+
+/* Ajusta el color de los encabezados para que se vean bien en el fondo negro */
+body.terminos-pagina h1,
+body.terminos-pagina h2,
+body.terminos-pagina h3,
+body.terminos-pagina h4 {
+    color: #ffffff;
+}
+
+/* Ajuste para el color de los párrafos si necesitas más contraste */
+body.terminos-pagina p {
+    color: #cccccc;
+}
+
+/* Estilo del enlace para volver a la página principal */
+.back-link {
+    display: inline-block;
+    margin-top: 50px;
+    padding: 15px 30px;
+    background-color: #007bff;
+    color: white;
+    text-decoration: none;
+    border-radius: 50px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.back-link:hover {
+    background-color: #0056b3;
+}
+
+/* Estilos para la presentación de la imagen en Términos y Condiciones */
+.image-presentation {
+    text-align: center;
+    margin-top: 40px;
+    padding: 20px;
+    background-color: transparent;
+    border: none;
+    box-shadow: none;
+}
+
+.image-presentation img {
+    max-width: 40%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+.image-presentation p {
+    font-size: 1.2em;
+    color: #ffffff;
+    line-height: 1.8;
+    max-width: 700px;
+    margin: 0 auto;
+    font-weight: 500;
+}
