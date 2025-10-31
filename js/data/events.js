@@ -24,7 +24,7 @@ export const events = [
             { type: "GENERAL", price: 150.00, description: "" },
             { type: "VIP", price: 280.00, description: "" },
         ],
-        whatsappGroupUrl: "https://chat.whatsapp.com/fakecarlcoxgroup"
+        whatsappGroupUrl: "https://chat.whatsapp.com/FSqdcANzG6WGXbipiu9rRo"
     },
     {
         id: 2,
@@ -39,7 +39,7 @@ export const events = [
             { type: "VIP", price: 125.00, description: "" },
             { type: "DJ BOOTH", price: 285.00, description: "" },
         ],
-        whatsappGroupUrl: "https://chat.whatsapp.com/fakeresistancegroup"
+        whatsappGroupUrl: "https://chat.whatsapp.com/EFU0tT7GmrN4fjGYIJ8EFs"
     },
     {
         id: 3,
@@ -53,7 +53,7 @@ export const events = [
             { type: "BUBUX", price: 50.00, description: "" },
             { type: "VIP", price: 60.00, description: "" },
         ],
-        whatsappGroupUrl: "https://chat.whatsapp.com/fakecarlcoxgroup"
+        whatsappGroupUrl: "https://chat.whatsapp.com/GQFKKNLr5a614OFhy7HKk8"
     },
     {
         id: 4,
@@ -67,7 +67,7 @@ export const events = [
             { type: "GENERAL", price: 60.00, description: "" },
             { type: "VIP", price: 130.00, description: "" },
         ],
-        whatsappGroupUrl: "https://chat.whatsapp.com/fakecarlcoxgroup"
+        whatsappGroupUrl: "https://chat.whatsapp.com/GQFKKNLr5a614OFhy7HKk8"
     },
     {
         id: 5,
@@ -83,7 +83,7 @@ export const events = [
             { type: "SUPERVIP", price: 224.00, description: "" },
             { type: "DJ BOOTH", price: 314.00, description: "" },
         ],
-        whatsappGroupUrl: "https://chat.whatsapp.com/fakecarlcoxgroup"
+        whatsappGroupUrl: "https://chat.whatsapp.com/GQFKKNLr5a614OFhy7HKk8"
     },
     {
         id: 6,
@@ -99,7 +99,7 @@ export const events = [
             { type: "VIP", price: 240.00, description: "" },
             { type: "PALCO ULTRA VIP", price: 340.00, description: "" },
         ],
-        whatsappGroupUrl: "https://chat.whatsapp.com/fakecarlcoxgroup"
+        whatsappGroupUrl: "https://chat.whatsapp.com/GQFKKNLr5a614OFhy7HKk8"
     },
     {
         id: 7,  
@@ -115,6 +115,6 @@ export const events = [
             { type: "DJ BOOTH", price: 90.00, description: "Acceso a zona DJ BOOTH, Experiencia Exódo, zona VIP y zona general" },
             { type: "BOX ZONA URBANA", price: 70.00, description: "Acceso a zona VIP y zona general" },
         ],
-        whatsappGroupUrl: "https://chat.whatsapp.com/fakecarlcoxgroup"
+        whatsappGroupUrl: "https://chat.whatsapp.com/GQFKKNLr5a614OFhy7HKk8"
     }
 ];
