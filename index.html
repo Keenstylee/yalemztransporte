@@ -1,217 +1,246 @@
 <!DOCTYPE html>
-<html lang="es">
+<html class="dark scroll-smooth" lang="es">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Yalemz - Transporte y Logística</title>
-    <link rel="stylesheet" href="estilos.css">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-</head>
-<body>
-    <header class="main-header">
-        <img src="imagen-logo1.png" alt="Logo de la empresa Yalemz" class="header-logo">
-        <h1>YALEMZ TRANSPORTE</h1>
-        <p>Tu destino es nuestra prioridad</p>
-    </header>
-
-    <div class="main-content-wrapper">
-        
-        <main class="main-content">
-            <section class="section accordion">
-                <div class="accordion-header">
-                    <h2>Misión y Visión</h2>
-                    <span class="accordion-icon">+</span>
-                </div>
-                <div class="accordion-content">
-                    <p><strong>Misión:</strong> Ofrecer un servicio de transporte de pasajeros y encomiendas seguro, cómodo y de alta calidad, conectando a las principales ciudades del país y superando las expectativas de nuestros clientes.</p>
-                    <br>
-                    <p><strong>Visión:</strong> Ser la empresa de transporte líder en el Perú, reconocida por nuestra excelencia operativa, innovación tecnológica y compromiso con la satisfacción total de nuestros pasajeros.</p>
-                </div>
-            </section>
-
-            <section class="section accordion">
-                <div class="accordion-header">
-                    <h2>Nuestros Destinos</h2>
-                    <span class="accordion-icon">+</span>
-                </div>
-                <div class="accordion-content">
-                    <ul>
-                        <li><strong>Lima:</strong> La capital, centro de negocios y oportunidades.</li>
-                        <li><strong>Ica:</strong> Famosa por sus viñedos, desiertos y oasis de Huacachina.</li>
-                        <li><strong>Chincha:</strong> Cuna de la cultura afroperuana y su rica tradición.</li>
-                        <li><strong>Arequipa:</strong> La Ciudad Blanca, con su impresionante arquitectura y volcanes.</li>
-                    </ul>
-                </div>
-            </section>
-
-
-            <section class="section accordion">
-                <div class="accordion-header">
-                    <h2>Servicio VIP Exclusivo</h2>
-                    <span class="accordion-icon">+</span>
-                </div>
-                <div class="accordion-content">
-                    <p>Disfruta de la comodidad de nuestro servicio VIP, diseñado para los viajeros más exigentes.</p>
-                    <ul>
-                        <li>Asientos reclinables 160°</li>
-                        <li>Entretenimiento a bordo (pantallas individuales)</li>
-                        <li>Conexión Wi-Fi gratuita</li>
-                        <li>Atención personalizada</li>
-    </ul>
-                </div>
-            </section>
-
-
-<section class="search-form-section">
-    <h2 class="search-title">BUSCA UN PASAJE DE BUS</h2> <!-- Título de la sección de búsqueda -->
-    <form class="bus-search-form">
-        <div class="form-group">
-            <label for="origen">ORIGEN <span class="required">*</span></label>
-            <select id="origen" name="origen" required>
-                <option value="">Seleccione</option>
-                    <option value="AREQUIPA">AREQUIPA</option>
-                    <option value="CAJAMARCA">CAJAMARCA</option>
-                    <option value="CAMANA">CAMANA</option>
-                    <option value="DESAGUADERO">DESAGUADERO</option>
-                    <option value="CHICLAYO">CHICLAYO</option>
-                    <option value="MANCORA">MÁNCORA</option>
-                    <option value="ICA">ICA</option>
-                    <option value="ILO">ILO</option>
-                    <option value="JULIACA">JULIACA</option>
-                    <option value="LIMA">LIMA</option>
-                    <option value="MOQUEGUA">MOQUEGUA</option>
-                    <option value="NAZCA">NAZCA</option>
-                    <option value="PIURA">PIURA</option>
-                    <option value="PUNO">PUNO</option>
-                    <option value="SULLANA">SULLANA</option>
-                    <option value="TACNA">TACNA</option>
-                    <option value="TRUJILLO">TRUJILLO</option>
-                    <option value="TUMBES">TUMBES</option>
-                </select>
-            </div>
-            <div class="form-group">
-                <label for="destino">DESTINO <span class="required">*</span></label>
-                <select id="destino" name="destino" required>
-                    <option value="">Seleccione</option>
-                    <option value="AREQUIPA">AREQUIPA</option>
-                    <option value="CAJAMARCA">CAJAMARCA</option>
-                    <option value="CAMANA">CAMANA</option>
-                    <option value="DESAGUADERO">DESAGUADERO</option>
-                    <option value="CHICLAYO">CHICLAYO</option>
-                    <option value="MANCORA">MÁNCORA</option>
-                    <option value="ICA">ICA</option>
-                    <option value="ILO">ILO</option>
-                    <option value="JULIACA">JULIACA</option>
-                    <option value="LIMA">LIMA</option>
-                    <option value="MOQUEGUA">MOQUEGUA</option>
-                    <option value="NAZCA">NAZCA</option>
-                    <option value="PIURA">PIURA</option>
-                    <option value="PUNO">PUNO</option>
-                    <option value="SULLANA">SULLANA</option>
-                    <option value="TACNA">TACNA</option>
-                    <option value="TRUJILLO">TRUJILLO</option>
-                    <option value="TUMBES">TUMBES</option>
-                </select>
-            </div>
-            <div class="form-group">
-                <label for="salida">SALIDA <span class="required">*</span></label>
-                <input type="date" id="salida" name="salida" required>
-            </div>
-            <div class="form-group">
-                <label for="retorno">RETORNO (OPCIONAL) <span class="required">*</span></label>
-                <input type="date" id="retorno" name="retorno">
-            </div>
-            
-            <button type="submit" class="search-btn">Buscar</button>
-        </form>
-    </section>
-
- 
-        <div class="our-services-showcase">
-            <h2>Nuestros Servicios de Transporte</h2>
-            <div class="services-grid">
-                <div class="service-card">
-                    <div class="icon-circle">
-                        <img src="imagen-transporte1.png" alt="Transporte de pasajeros">
-                    </div>
-                    <h3>Transporte de pasajeros</h3>
-                    <p>Servicio de transporte de pasajeros cómodo y seguro a diversos destinos.</p>
-                </div>
-                <div class="service-card">
-                    <div class="icon-circle">
-                        <img src="imagen-encomienda.webp" alt="Encomiendas y carga">
-                    </div>
-                    <h3>Encomiendas y carga</h3>
-                    <p>Servicio de envío de encomiendas y carga a nivel nacional con seguimiento.</p>
-                </div>
-                <div class="service-card">
-                    <div class="icon-circle">
-                        <img src="imagen-servicio.jpg" alt="Servicios corporativos">
-                    </div>
-                    <h3>Servicios corporativos</h3>
-                    <p>Soluciones de transporte y logística para clientes empresariales y corporativos.</p>
-                </div>
-                <div class="service-card">
-                    <div class="icon-circle">
-                        <img src="imagen-convenio.jpg" alt="Convenios con empresas">
-                    </div>
-                    <h3>Convenios con empresas</h3>
-                    <p>Conviértete en uno de nuestros socios estratégicos y accede a beneficios exclusivos.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="section">
-        <h2>Contáctanos</h2>
-        <ul class="contact-info">
-            <li><strong>Teléfono:</strong> (51) 940 136 949</li>
-            <li><strong>Correo:</strong> yalemzvip@gmail.com</li>
-            <li><strong>Oficina Central:</strong> Ica av. Álamo 159</li>
-        </ul>
-    </section>
-    <section class="contact-whatsapp">
-    <h2>Contáctanos por WhatsApp</h2>
-    <a href="https://wa.me/51940136949?text=Hola,%20quiero%20más%20información" target="_blank" class="whatsapp-btn">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/WhatsApp.svg/1200px-WhatsApp.svg.png" alt="WhatsApp" class="whatsapp-icon">
-        Enviar mensaje
-    </a>
-</section>
-
-    <section class="reclamaciones-section">
-    <h2>Libro de Reclamaciones</h2>
-    <form class="reclamaciones-form" action="enviar_reclamacion.php" method="POST">
-        <div class="form-group">
-            <label for="nombre">Tu nombre:</label>
-            <input type="text" id="nombre" name="nombre" placeholder="Escribe tu nombre">
-        </div>
-        
-        <div class="form-group">
-            <label for="reclamacion">Escribe tu reclamación:</label>
-            <textarea id="reclamacion" name="reclamacion" rows="4" placeholder="Escribe tu reclamación aquí..."></textarea>
-        </div>
-        <button type="submit" class="reclamaciones-btn">Enviar Reclamación</button>
-    </form>
-    
-</section>
-    <footer class="footer">
-        <p><a href="terminos.html" target="_blank">Términos y Condiciones</a></p>
-        <p>&copy; 2025 Yalemz. Todos los derechos reservados.</p>
-    </footer>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Web-Eventos</title>
+    <link rel="icon" href='data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><text y=".9em" font-size="90">🎟️</text></svg>'>
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;700;800&display=swap"
+        rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
     <script>
-        document.addEventListener("DOMContentLoaded", function() {
-            const headers = document.querySelectorAll('.accordion-header');
-            
-            headers.forEach(header => {
-                header.addEventListener('click', function() {
-                    this.classList.toggle('active');
-                    const content = this.nextElementSibling;
-                    content.classList.toggle('expanded');
-                });
-            });
-        });
-        
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        primary: "#5b13ec",
+                        "background-light": "#f6f6f8",
+                        "background-dark": "#161022",
+                    },
+                    fontFamily: {
+                        display: ["Plus Jakarta Sans"],
+                    },
+                    borderRadius: {
+                        DEFAULT: "0.25rem",
+                        lg: "0.5rem",
+                        xl: "0.75rem",
+                        full: "9999px",
+                    },
+                },
+            },
+        };
     </script>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
 
+<body class="bg-background-light dark:bg-background-dark font-display">
+    <div class="relative min-h-screen">
+        <div class="absolute inset-0 bg-repeat bg-[length:40px_40px] opacity-5" style="
+          background-image: url('data:image/svg+xml,%3Csvg width=\'40\' height=\'40\' viewBox=\'0 0 40 40\' xmlns=\'http://www.w3.org/2000/svg\'%3E%3Cg fill=\'%23ffffff\' fill-opacity=\'0.1\' fill-rule=\'evenodd\'%3E%3Cpath d=\'M0 40L40 0H20L0 20M40 40V20L20 40\'/%3E%3C/g%3E%3C/svg%3E');
+        ">
+        </div>
+
+        <div class="relative z-10 flex h-full grow flex-col">
+            <header class="sticky top-0 z-20 bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-sm">
+                <div
+                    class="container mx-auto flex items-center justify-between whitespace-nowrap px-4 sm:px-6 lg:px-8 py-3 border-b border-white/10 dark:border-white/10">
+                    <div class="flex items-center gap-8">
+                        <div class="flex items-center gap-2 text-black dark:text-white">
+                            <span class="material-symbols-outlined text-primary text-3xl">
+                                confirmation_number
+                            </span>
+                            <h2 class="text-lg font-bold">WEB-EVENTOS</h2>
+                        </div>
+                        <nav class="hidden md:flex items-center gap-6">
+                            <a class="text-sm font-medium text-black/70 dark:text-white/70 hover:text-primary dark:hover:text-primary transition-colors" href="#eventos">Eventos</a>
+                            <a class="text-sm font-medium text-black/70 dark:text-white/70 hover:text-primary dark:hover:text-primary transition-colors" href="#testimonios">Testimonios</a>
+                            <a class="text-sm font-medium text-black/70 dark:text-white/70 hover:text-primary dark:hover:text-primary transition-colors" href="#pruebas">Pruebas</a>
+                            <a class="text-sm font-medium text-black/70 dark:text-white/70 hover:text-primary dark:hover:text-primary transition-colors" href="#quien-soy">Quien Soy</a>
+                        </nav>
+                    </div> 
+                    <!-- <div class="flex items-center gap-2">
+                        <button id="search-button" class="flex items-center justify-center rounded-full h-10 w-10 bg-primary/10 dark:bg-primary/20 text-black/80 dark:text-white/80 hover:bg-primary/20 dark:hover:bg-primary/30 transition-colors">
+                            <span class="material-symbols-outlined text-lg">search</span>
+                        </button>
+                        <button id="favorite-button" class="flex items-center justify-center rounded-full h-10 w-10 bg-primary/10 dark:bg-primary/20 text-black/80 dark:text-white/80 hover:bg-primary/20 dark:hover:bg-primary/30 transition-colors">
+                            <span class="material-symbols-outlined text-lg">favorite_border</span>
+                        </button>
+                        <button id="account-button" class="flex items-center justify-center rounded-full h-10 w-10 bg-primary/10 dark:bg-primary/20 text-black/80 dark:text-white/80 hover:bg-primary/20 dark:hover:bg-primary/30 transition-colors">
+                            <span class="material-symbols-outlined text-lg">account_circle</span>
+                        </button>
+                    </div> -->
+                </div>
+            </header>
+
+            <!-- Main Content -->
+            <main class="container mx-auto px-4 sm:px-6 lg:px-8 py-10 flex-grow">
+                <div class="flex flex-col gap-12">
+                    <section id="eventos" class="flex flex-col gap-12">
+                        <h1
+                            class="text-4xl md:text-5xl font-extrabold text-center text-black dark:text-white tracking-tight">
+                            Eventos Disponibles
+                        </h1>
+    
+                        <!-- Events Grid - Se llena dinámicamente -->
+                        <div id="events-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
+                            <!-- Las tarjetas de eventos se insertan aquí -->
+                        </div>
+                    </section>
+
+                    <!-- Testimonials Section -->
+                    <section id="testimonios" class="py-16">
+                        <div class="flex flex-col gap-12">
+                            <h2 class="text-4xl font-extrabold text-center text-black dark:text-white tracking-tight">
+                                Lo que dicen nuestros clientes
+                            </h2>
+                            <div id="testimonials-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                                <!-- Los testimonios se insertan aquí -->
+                            </div>
+                        </div>
+                    </section>
+                    <!-- Sales Screenshots Section -->
+                    <section id="pruebas" class="py-16">
+                        <div class="flex flex-col gap-12">
+                            <h2 class="text-4xl font-extrabold text-center text-black dark:text-white tracking-tight">
+                                Capturas de Ventas Mas Recientes
+                            </h2>
+                            <div id="carousel-container" class="relative w-full overflow-hidden">
+                                <div id="carousel-track" class="flex transition-transform ease-linear duration-1000">
+                                    <!-- Carousel slides will be injected here -->
+                                </div>
+                                <button id="carousel-prev" class="absolute top-1/2 left-0 -translate-y-1/2 bg-black/50 text-white p-2 rounded-full z-10">
+                                    <span class="material-symbols-outlined">arrow_back_ios</span>
+                                </button>
+                                <button id="carousel-next" class="absolute top-1/2 right-0 -translate-y-1/2 bg-black/50 text-white p-2 rounded-full z-10">
+                                    <span class="material-symbols-outlined">arrow_forward_ios</span>
+                                </button>
+                            </div>
+                        </div>
+
+
+ <!-- Who I Am Section -->
+<section id="quien-soy" class="py-16">
+    <div class="flex flex-col gap-12 items-center">
+        <!-- Foto de perfil -->
+        <div class="flex justify-center">
+            <img src="img/perfil/keenfest.JPEG" alt="Foto de perfil" class="w-32 h-32 rounded-full border-4 border-primary">
+        </div>
+
+        <!-- Nombre y breve descripción -->
+        <div class="text-center">
+            <h3 class="text-2xl font-extrabold text-black dark:text-white">Keenscy Sanchez</h3>
+            <p class="text-lg text-black dark:text-white">Creador de contenido | Promotor de eventos musicales</p>
+        </div>
+
+        <!-- Sección de recuadros (quien-soy-content) -->
+        <div id="who-iam-content" class="max-w-4xl mx-auto">
+            <!-- Aquí es donde puedes agregar otros recuadros si lo deseas en el futuro -->
+        </div>
+    </div>
+</section>
+
+
+            <!-- Footer -->
+            <footer class="bg-background-dark/80 backdrop-blur-sm mt-auto relative ticket-bg border-t border-white/10">
+                <div class="container mx-auto px-4 sm:px-6 lg:px-8 py-12">
+                    <div class="grid grid-cols-1 md:grid-cols-4 gap-8 text-white/70">
+                        <div class="col-span-1 md:col-span-2">
+                            <div class="flex items-center gap-2 text-white mb-4">
+                                <span class="material-symbols-outlined text-primary text-3xl">
+                                    confirmation_number
+                                </span>
+                                <h2 class="text-xl font-bold">WEB-EVENTOS</h2>
+                            </div>
+                            <p class="text-sm max-w-md">Tu portal para los mejores eventos. Compra y vende entradas de
+                                forma segura y sencilla. ¡No te pierdas ni un momento de la acción!</p>
+                        </div>
+                        <div>
+                            <h4 class="text-lg font-bold text-white mb-4">Contacto</h4>
+                            <ul class="space-y-2 text-sm">
+                                <li><a class="hover:text-primary transition-colors flex items-center gap-2"
+                                        href="mailto:Keenfest.pe@gmail.com"><span class="material-symbols-outlined text-base">email</span>
+                                        Keenfest.pe@gmail.com</a></li>
+                                <li><a class="hover:text-primary transition-colors flex items-center gap-2"
+                                        href="tel:+51968424445"><span class="material-symbols-outlined text-base">phone</span>+51 968424445</a></li>
+                                <li><a class="hover:text-primary transition-colors flex items-center gap-2"
+                                        href="#"><span class="material-symbols-outlined text-base">location_on</span>123 Calle Falsa, Ciudad Gótica</a></li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h4 class="text-lg font-bold text-white mb-4">Redes Sociales</h4>
+                            <div class="flex space-x-4">
+                                <a class="text-white/70 hover:text-primary transition-colors" href="https://www.instagram.com/keenfest/?hl=es" target="_blank">
+                                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                                        <path
+                                            d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.07 4.85-.148 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.162 6.162 6.162 6.162-2.759 6.162-6.162-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4s1.791-4 4-4 4 1.79 4 4-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44 1.441-.645 1.441-1.44c0-.795-.645-1.44-1.441-1.44z">
+                                        </path>
+                                    </svg>
+                                </a>
+                                <a class="text-white/70 hover:text-primary transition-colors" href="https://www.tiktok.com/@keenfest" target="_blank">
+                                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                                        <path d="M19.589 6.686a4.793 4.793 0 0 1-3.77-4.245V2h-3.445v13.672a2.896 2.896 0 0 1-5.201 1.743l-.002-.001.002.001a2.895 2.895 0 0 1 3.183-4.51v-3.5a6.329 6.329 0 0 0-5.394 10.692 6.33 6.33 0 0 0 10.857-4.424V8.687a8.182 8.182 0 0 0 4.773 1.526V6.79a4.831 4.831 0 0 1-1.003-.104z"/>
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mt-8 pt-8 border-t border-white/10 text-center text-sm text-white/50">
+                        <p>© 2025 Web-Eventos. Todos los derechos reservados.</p>
+                    </div>
+                </div>
+            </footer>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script type="module" src="js/main.js"></script>
+
+    <!-- Modal de Entradas -->
+    <div class="hidden fixed inset-0 z-50 flex items-center justify-center bg-black/80 backdrop-blur-sm"
+        id="ticketModal">
+        <div class="relative w-full max-w-lg m-4">
+            <div class="bg-background-dark rounded-xl shadow-2xl shadow-primary/20 border border-white/10">
+                <div class="relative p-8">
+                    <div class="absolute top-0 right-0 -mt-4 -mr-4 w-24 h-24 bg-repeat bg-[length:20px_20px] opacity-10" style="background-image: url(&quot;data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23ffffff' fill-opacity='0.1' fill-rule='evenodd'%3E%3Cpath d='M0 40L40 0H20L0 20M40 40V20L20 40'/%3E%3C/g%3E%3C/svg%3E&quot;);"></div>
+                    <button class="absolute top-4 right-4 text-white/50 hover:text-white transition-colors"
+                        onclick="document.getElementById('ticketModal').classList.add('hidden')">
+                        <span class="material-symbols-outlined">close</span>
+                    </button>
+                    <div class="text-center mb-6">
+                        <h2 class="text-3xl font-bold text-white tracking-tight" id="modal-event-title"></h2>
+                        <p class="text-white/60 mt-1">Selecciona tu tipo de entrada</p>
+                    </div>
+                    <div class="space-y-4" id="modal-ticket-types">
+                        <!-- Ticket types will be injected here -->
+                    </div>
+                    <div class="mt-8">
+                        <a class="w-full flex items-center justify-center rounded-lg h-12 px-6 bg-green-500 text-white text-base font-bold leading-normal tracking-wide hover:bg-green-600 transition-colors"
+                            href="#" target="_blank" id="whatsapp-buy-link">
+                            <svg class="w-6 h-6 mr-3" fill="currentColor" viewBox="0 0 24 24">
+                                <path
+                                    d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.894 11.892-1.99 0-3.903-.52-5.586-1.459l-6.323 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 4.315 1.731 6.086l.474.852-1.107 4.054 4.144-1.085.826.495z">
+                                </path>
+                            </svg>
+                            <span class="truncate">Comprar entrada en WhatsApp</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal de Imagen -->
+    <div class="hidden fixed inset-0 z-50 flex items-center justify-center bg-black/80 backdrop-blur-sm" id="imageModal">
+        <img class="max-w-full max-h-full rounded-lg shadow-lg" id="modalImage" src="" alt="Imagen del evento">
+        <button class="absolute top-4 right-4 text-white/50 hover:text-white transition-colors" onclick="document.getElementById('imageModal').classList.add('hidden')">
+            <span class="material-symbols-outlined">close</span>
+        </button>
+    </div>
 </body>
+
 </html>

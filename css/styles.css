@@ -1,0 +1,165 @@
+/*
+* Prefijos de-webkit- y -moz- para una mejor compatibilidad con los navegadores.
+*/
+
+* {
+    scroll-behavior: smooth;
+}
+
+.hover\:scale-105 {
+    will-change: transform;
+}
+
+img {
+    image-rendering: -webkit-optimize-contrast;
+}
+
+body {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+
+
+.ticket-bg {
+    background-image: radial-gradient(circle at 100% 0,
+            rgba(255, 255, 255, 0.05) 5%,
+            transparent 5%),
+        radial-gradient(circle at 0 0,
+            rgba(255, 255, 255, 0.05) 5%,
+            transparent 5%);
+    background-position: top left, top right;
+    background-repeat: no-repeat;
+    background-size: 1rem 2rem;
+}
+
+.ticket-bg:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 1rem;
+    right: 1rem;
+    height: 1px;
+    background-image: linear-gradient(to right,
+            rgba(255, 255, 255, 0.1) 50%,
+            transparent 50%);
+    background-size: 8px 1px;
+}
+
+.image-container {
+    position: relative;
+    overflow: hidden;
+}
+
+.expand-button {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.8);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border-radius: 50%;
+    padding: 0.5rem;
+    opacity: 0;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.image-container:hover .expand-button {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+}
+
+#imageModal {
+    transition: opacity 0.3s ease;
+}
+
+#ticketModal.is-active {
+    display: flex !important;
+    opacity: 1;
+    z-index: 1000; /* Ensure it's above other content */
+}
+
+/* Carousel Styles */
+#carousel-track {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.carousel-slide {
+    flex: 0 0 calc(100% / 5); /* 5 images per page by default */
+    box-sizing: border-box;
+    padding: 0 0.5rem; /* Adjusted padding */
+}
+
+.carousel-slide img {
+    width: 100%;
+    height: 30rem; /* Increased height for better visibility */
+    object-fit: contain;
+    object-position: center;
+}
+
+#carousel-container {
+    position: relative;
+    overflow: hidden;
+}
+
+#carousel-prev,
+#carousel-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 10;
+    border-radius: 50%;
+}
+
+#carousel-prev {
+    left: 10px;
+}
+
+#carousel-next {
+    right: 10px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1200px) {
+    .carousel-slide {
+        flex: 0 0 calc(100% / 4); /* 4 images per page on medium screens */
+    }
+}
+
+@media (max-width: 768px) {
+    .carousel-slide {
+        flex: 0 0 calc(100% / 3); /* 3 images per page on small screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .carousel-slide {
+        flex: 0 0 100%; /* 1 image per page on extra small screens */
+    }
+}
+
+/* Who I Am Section Styles */
+#who-iam-content {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+}
+
+@media (min-width: 768px) {
+    #who-iam-content {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (min-width: 1024px) {
+    #who-iam-content {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}
