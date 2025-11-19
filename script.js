@@ -153,4 +153,95 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     });
 
+// Forzar apertura del calendario al hacer click en cualquier parte del input
+document.querySelectorAll('input[type="date"]').forEach(input => {
+    input.addEventListener('click', function() {
+        this.showPicker(); // Abre el calendario en navegadores modernos
+    });
+});
+
+
+// ======================
+// Animaciones: entradas y visuales
+// ======================
+(function() {
+    const observerOptions = { root: null, rootMargin: "0px 0px -10% 0px", threshold: 0.08 };
+
+    const fadeTargets = document.querySelectorAll(
+        ".hero-overlay, .main-content-wrapper, .search-form-section, .our-services-showcase, .service-card"
+    );
+
+    fadeTargets.forEach(el => {
+        if (!el.classList.contains('fade-in')) el.classList.add('fade-in');
+    });
+
+    const io = new IntersectionObserver((entries, obs) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('visible');
+
+                if (entry.target.classList.contains('hero-overlay')) {
+                    entry.target.classList.add('intro');
+                }
+
+                if (entry.target.classList.contains('service-card')) {
+                    const parent = entry.target.parentElement;
+                    const nodes = Array.from(parent.children);
+                    const idx = nodes.indexOf(entry.target);
+                    entry.target.style.transitionDelay = (idx * 80) + "ms";
+                }
+
+                obs.unobserve(entry.target);
+            }
+        });
+    }, observerOptions);
+
+    fadeTargets.forEach(t => io.observe(t));
+
+    const primaryButtons = document.querySelectorAll('.search-btn, .reclamaciones-btn, .whatsapp-btn');
+    primaryButtons.forEach((btn, i) => {
+        setTimeout(() => btn.classList.add('btn-animate'), 220 + (i * 80));
+    });
+
+    const wa = document.querySelector('.whatsapp-btn');
+    if (wa) {
+        setTimeout(() => wa.classList.add('pulse'), 900);
+    }
+
+    function markInputError(el) {
+        if (!el) return;
+        el.classList.add('input-error');
+        setTimeout(() => el.classList.remove('input-error'), 1200);
+        try { el.focus(); } catch(e) {}
+    }
+
+    const busForm = document.querySelector('.bus-search-form');
+    if (busForm) {
+        busForm.addEventListener('submit', function(e){
+            const origen = document.getElementById('origen');
+            const destino = document.getElementById('destino');
+            const salida = document.getElementById('salida');
+
+            if (!origen.value) { markInputError(origen); }
+            if (!destino.value) { markInputError(destino); }
+            if (!salida.value) { markInputError(salida); }
+        });
+    }
+
+    const libroForm = document.querySelector('.reclamaciones-form');
+    if (libroForm) {
+        libroForm.addEventListener('submit', function(e){
+            const nombre = document.getElementById('nombre');
+            const telefono = document.getElementById('telefono');
+            const reclamacion = document.getElementById('reclamacion');
+
+            if (!nombre.value.trim()) markInputError(nombre);
+            if (!/^[0-9]{9}$/.test(telefono.value.trim())) markInputError(telefono);
+            if (reclamacion.value.trim().length < 20) markInputError(reclamacion);
+        });
+    }
+
+})();
+
+    
 });

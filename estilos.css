@@ -965,3 +965,117 @@ h2 {
     padding-bottom: 40px; /* espacio antes del libro de reclamaciones */
     margin-bottom: 40px; /* separación visual */
 }
+
+/* ========== ANIMACIONES GENERALES ========== */
+
+/* Fade-in y slide-up para elementos al entrar en vista */
+.fade-in {
+  opacity: 0;
+  transform: translateY(18px);
+  transition: opacity 600ms ease-out, transform 600ms ease-out;
+}
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Pequeño "pop" para botones al entrar o al hacer hover */
+@keyframes popIn {
+  0% { transform: scale(.9); opacity: 0; }
+  60% { transform: scale(1.03); opacity: 1; }
+  100% { transform: scale(1); opacity: 1; }
+}
+.btn-animate {
+  animation: popIn 420ms ease both;
+}
+
+/* Pulse para llamar la atención (ej. WhatsApp) */
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.03); }
+  100% { transform: scale(1); }
+}
+.whatsapp-btn.pulse {
+  animation: pulse 2s infinite;
+}
+
+/* Rotación del icono del acordeón al abrir */
+.accordion-header .accordion-icon {
+  transition: transform 300ms ease;
+}
+.accordion-header.active .accordion-icon {
+  transform: rotate(45deg);
+}
+
+/* Efecto "shake" para campos con error */
+@keyframes shake {
+  0% { transform: translateX(0); }
+  20% { transform: translateX(-6px); }
+  40% { transform: translateX(6px); }
+  60% { transform: translateX(-4px); }
+  80% { transform: translateX(4px); }
+  100% { transform: translateX(0); }
+}
+.input-error {
+  border-color: #E74C3C !important;
+  box-shadow: 0 0 0 4px rgba(231, 76, 60, 0.09);
+  animation: shake 360ms ease;
+}
+
+/* Focus suave en inputs */
+.bus-search-form input:focus,
+.bus-search-form select:focus,
+.reclamaciones-form input:focus,
+.reclamaciones-form textarea:focus {
+  outline: none;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.06);
+  border-color: var(--color-principal);
+  transition: box-shadow 240ms ease, border-color 240ms ease;
+}
+
+/* Aparición elegante de las tarjetas */
+.service-card {
+  opacity: 0;
+  transform: translateY(10px) scale(.995);
+  transition: opacity 500ms ease, transform 500ms ease;
+}
+.service-card.visible {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+}
+
+/* Hover extra suave para botones */
+.search-btn, .reclamaciones-btn, .whatsapp-btn {
+  transition: transform 180ms ease, box-shadow 180ms ease;
+}
+.search-btn:active, .reclamaciones-btn:active {
+  transform: translateY(2px);
+}
+
+/* Hero overlay entrada */
+.hero-overlay.intro {
+  animation: fadeHero 700ms ease both;
+}
+@keyframes fadeHero {
+  from { opacity: 0; transform: translateY(10px) scale(.995); }
+  to { opacity: 1; transform: translateY(0) scale(1); }
+}
+
+/* Toast de éxito */
+.toast-success {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  background: #2ecc71;
+  color: white;
+  padding: 12px 16px;
+  border-radius: 8px;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.18);
+  opacity: 0;
+  transform: translateY(10px);
+  transition: opacity 300ms ease, transform 300ms ease;
+}
+.toast-success.show {
+  opacity: 1;
+  transform: translateY(0);
+}
