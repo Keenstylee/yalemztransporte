@@ -635,8 +635,9 @@ h2 {
 
 /* ========== TEXTO Y ESPACIADO ========== */
 .modal-box p {
-    margin: 10px 0;
-    line-height: 1.5;
+    overflow-wrap: break-word;
+    word-break: break-word;
+    white-space: normal;
 }
 
 /* ========== BOTÓN ========== */
@@ -966,9 +967,7 @@ h2 {
     margin-bottom: 40px; /* separación visual */
 }
 
-/* ========== ANIMACIONES GENERALES ========== */
-
-/* Fade-in y slide-up para elementos al entrar en vista */
+/* Fade-in y slide-up */
 .fade-in {
   opacity: 0;
   transform: translateY(18px);
@@ -979,7 +978,7 @@ h2 {
   transform: translateY(0);
 }
 
-/* Pequeño "pop" para botones al entrar o al hacer hover */
+/* PopIn */
 @keyframes popIn {
   0% { transform: scale(.9); opacity: 0; }
   60% { transform: scale(1.03); opacity: 1; }
@@ -989,7 +988,7 @@ h2 {
   animation: popIn 420ms ease both;
 }
 
-/* Pulse para llamar la atención (ej. WhatsApp) */
+/* Pulse */
 @keyframes pulse {
   0% { transform: scale(1); }
   50% { transform: scale(1.03); }
@@ -999,7 +998,7 @@ h2 {
   animation: pulse 2s infinite;
 }
 
-/* Rotación del icono del acordeón al abrir */
+/* Rotación del icono del acordeón */
 .accordion-header .accordion-icon {
   transition: transform 300ms ease;
 }
@@ -1007,7 +1006,7 @@ h2 {
   transform: rotate(45deg);
 }
 
-/* Efecto "shake" para campos con error */
+/* Shake para errores */
 @keyframes shake {
   0% { transform: translateX(0); }
   20% { transform: translateX(-6px); }
@@ -1022,7 +1021,7 @@ h2 {
   animation: shake 360ms ease;
 }
 
-/* Focus suave en inputs */
+/* Focus suave */
 .bus-search-form input:focus,
 .bus-search-form select:focus,
 .reclamaciones-form input:focus,
@@ -1033,7 +1032,7 @@ h2 {
   transition: box-shadow 240ms ease, border-color 240ms ease;
 }
 
-/* Aparición elegante de las tarjetas */
+/* Tarjetas servicios */
 .service-card {
   opacity: 0;
   transform: translateY(10px) scale(.995);
@@ -1044,7 +1043,7 @@ h2 {
   transform: translateY(0) scale(1);
 }
 
-/* Hover extra suave para botones */
+/* Botones */
 .search-btn, .reclamaciones-btn, .whatsapp-btn {
   transition: transform 180ms ease, box-shadow 180ms ease;
 }
@@ -1052,7 +1051,7 @@ h2 {
   transform: translateY(2px);
 }
 
-/* Hero overlay entrada */
+/* Hero intro */
 .hero-overlay.intro {
   animation: fadeHero 700ms ease both;
 }
@@ -1061,7 +1060,7 @@ h2 {
   to { opacity: 1; transform: translateY(0) scale(1); }
 }
 
-/* Toast de éxito */
+/* Toast éxito */
 .toast-success {
   position: fixed;
   right: 20px;
@@ -1079,3 +1078,10 @@ h2 {
   opacity: 1;
   transform: translateY(0);
 }
+
+.modal-box, 
+.modal-overlay {
+    opacity: 1 !important;
+    transform: none !important;
+}
+
